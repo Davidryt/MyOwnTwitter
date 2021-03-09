@@ -81,6 +81,23 @@ INSERT INTO Poblaciones VALUES(28, 2019, 356991);
 
 SELECT Paises.nombre, IdiomasPais.idioma FROM Paises LEFT JOIN IdiomasPais ON id=IdiomasPais.pais;
 
+
+
+### ME HAN PASADO ESTO:
+
+Práctica 4 Ejer 1:
+SELECT A.nombre AS Pais, C.nombre AS Idioma FROM Paises AS A LEFT JOIN IdiomasPais AS B ON A.id = B.pais LEFT JOIN Idiomas AS C ON C.id = B.idioma;
+Práctica 4 Ejer 2:
+a)
+SELECT A.pais, A.anyo, A.poblacion,  B.anyo, B.poblacion FROM Poblaciones AS A INNER JOIN Poblaciones AS B ON A.pais = B.pais AND  A.anyo+1 = B.anyo AND A.poblacion > B.poblacion;
+b)
+SELECT C.nombre, A.anyo, A.poblacion,  B.anyo, B.poblacion FROM Poblaciones AS A INNER JOIN Poblaciones AS B ON A.pais = B.pais AND  A.anyo+1 = B.anyo AND A.poblacion > B.poblacion INNER JOIN Paises AS C ON C.id = B.pais;
+c)
+SELECT C.nombre, A.anyo, A.poblacion,  B.anyo, B.poblacion FROM Poblaciones AS A INNER JOIN Poblaciones AS B ON A.pais = B.pais AND  A.anyo+1 = B.anyo AND A.poblacion*1.01 <= B.poblacion INNER JOIN Paises AS C ON C.id = B.pais;
+
+
+
+
 # Ejercicio 2
 
 	1. 
