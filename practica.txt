@@ -1,0 +1,107 @@
+### PRÁCTICA 3
+
+# Ejercicio 1
+
+mysql -h mysql.lab.it.uc3m.es -u 21_comweb_17 -p -D 21_comweb_17b <tablas.sql
+mysql -h mysql.lab.it.uc3m.es -u 21_comweb_17 -p -D 21_comweb_17b <datos.sql
+
+mysql -h mysql.lab.it.uc3m.es -u 21_comweb_17 -p -D 21_comweb_17b
+Contraseña: oNo6BrTC
+
+# Ejercicio 2
+
+	1.	SELECT *
+    -> FROM Paises
+    -> WHERE id=10;
+
+	2.	SELECT *
+    -> FROM Poblaciones
+    -> WHERE anyo=2019;
+
+	3.	SELECT * FROM Poblaciones WHERE anyo BETWEEN 2016 AND 2018;
+
+	4.	SELECT * FROM Poblaciones WHERE poblacion > 50000000;
+
+	5.	SELECT * FROM Poblaciones WHERE anyo < 2015 AND pais=10;
+
+	6.	SELECT * FROM Poblaciones WHERE anyo IN (2017, 2018) AND poblacion < 10000000;
+
+	7.	SELECT * FROM Poblaciones
+    -> WHERE pais = 10
+    -> ORDER BY anyo DESC;
+
+# Ejercicio 3
+
+	1. SELECT SUM(poblacion) FROM Poblaciones WHERE anyo = 2019;
+
+	2. SELECT AVG(poblacion) FROM Poblaciones WHERE anyo = 2019;
+
+	3. SELECT pais, MAX(poblacion), AVG(poblacion), MIN(poblacion) 
+	-> FROM Poblaciones
+    -> GROUP BY pais;
+
+	4. SELECT DISTINCT idioma FROM IdiomasPais ORDER BY idioma DESC;
+
+# Ejercicio 4
+
+	1. SELECT Paises.nombre, Capitales.nombre 
+	-> FROM Paises 
+	-> INNER JOIN Capitales 
+	-> ON capital=Capitales.id;
+
+	2. SELECT Paises.nombre AS País, Capitales.nombre AS Capital 
+	-> FROM Paises 
+	-> INNER JOIN Capitales 
+	-> ON capital=Capitales.id;
+
+	3. SELECT Paises.nombre
+    -> FROM Paises
+    -> INNER JOIN IdiomasPais
+    -> ON id=IdiomasPais.pais
+    -> WHERE idioma=1;
+
+	4. SELECT Paises.nombre, Poblaciones.poblacion 
+    -> FROM Paises 
+    -> INNER JOIN IdiomasPais 
+    -> ON id=IdiomasPais.pais 
+    -> INNER JOIN Poblaciones 
+    -> ON id=Poblaciones.pais
+    -> WHERE idioma=1 AND anyo=2019;
+
+
+### PRÁCTICA 4
+
+# Ejercicio 1
+
+INSERT INTO Capitales values(28, 'Reykjavic');
+INSERT INTO Paises Values(28, 'Islandia', 28);
+INSERT INTO Poblaciones VALUES(28, 2018, 38114);
+INSERT INTO Poblaciones VALUES(28, 2019, 356991);
+*para todos los paises
+
+SELECT Paises.nombre, IdiomasPais.idioma FROM Paises LEFT JOIN IdiomasPais ON id=IdiomasPais.pais;
+
+# Ejercicio 2
+
+	1. 
+
+	2. 
+
+	3. 
+
+# Ejercicio 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
