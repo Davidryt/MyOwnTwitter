@@ -1,0 +1,12 @@
+************ ARCHIVOS Y VISTAS ************
+
+	*** VISTAS ***
+
+	- Inicio de sesión (y registro)
+	- Vista principal
+	- Vista de perfil de usuario
+	- Vista de conversación
+
+	*** SRC ***
+	- 
+	- 

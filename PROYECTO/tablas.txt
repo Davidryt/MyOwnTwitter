@@ -1,0 +1,56 @@
+********* TABLAS **********
+
+	mysql -h mysql.lab.it.uc3m.es -u 21_comweb_27 -p -D 21_comweb_27b
+	Contraseña: 695vTBOX
+
+	- Usuarios: 	id
+					username
+					password
+					nombre_largo
+					correo
+					bio
+
+	- Mensajes: 	id
+					autor
+					mensaje
+					datetime
+					responde_a (null si no es respuesta, id del tweet al que responde si sí lo es)
+					es_retweet (null si no es retweet, id del tweet que se retweetea)
+
+	- Seguimientos:	id_seguidor
+					id_seguido
+
+
+CREATE TABLE Usuarios(
+	id int NOT NULL auto_increment,
+	login VARCHAR(255) NOT NULL,
+	password VARCHAR(255) NOT NULL,
+	nombre VARCHAR(255) NOT NULL,
+	correo VARCHAR(255) NOT NULL,
+	bio VARCHAR(255),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE Mensajes(
+	id int NOT NULL auto_increment PRIMARY KEY,
+	autor int NOT NULL,
+	mensaje VARCHAR(255) NOT NULL,
+	fecha DATETIME NOT NULL,
+	responde_a int REFERENCES Mensajes(id),
+	es_retweet int REFERENCES Mensajes(id),
+	CONSTRAINT FOREIGN KEY(autor)
+	REFERENCES Usuarios(id)
+);
+
+CREATE TABLE Seguimientos(
+	id_seguidor int NOT NULL,
+	id_seguido int NOT NULL,
+	CONSTRAINT FOREIGN KEY(id_seguidor)
+	REFERENCES Usuarios(id),
+	CONSTRAINT FOREIGN KEY(id_seguido)
+	REFERENCES Usuarios(id)
+);
+
+
+
+

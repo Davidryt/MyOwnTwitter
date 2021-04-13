@@ -1,0 +1,12 @@
+<Context reloadable="true">
+    <Resource
+        name="jdbc/BookShop"
+        auth="Container"
+        type="javax.sql.DataSource"
+        username="21_comweb_17"
+        password="oNo6BrTC"
+        driverClassName="com.mysql.jdbc.Driver"
+        url="jdbc:mysql://mysql.lab.it.uc3m.es/21_comweb_17c"
+        maxActive="8"
+        maxIdle="4"/>
+</Context>
