@@ -8,5 +8,21 @@
 	- Vista de conversación
 
 	*** SRC ***
+	
+	- twitter:
+		- DBManager:
+			consultas SQL: 
+				busqueda de tweets de un usuario para la vista de perfil			HECHO
+				busqueda de tweet de seguidos para la TL							HECHO
+				login																HECHO
+				busqueda de respuesta a un tweet para vista de conversación			HECHO
+				insert para registro de usuario										HECHO
+				comprobación de username disponible									HECHO
+				insert al poner un tweet											HECHO
+				seguir y dejar de seguir											HECHO
 	- 
-	- 
+
+
+
+
+*** adicional: borrar tweets
