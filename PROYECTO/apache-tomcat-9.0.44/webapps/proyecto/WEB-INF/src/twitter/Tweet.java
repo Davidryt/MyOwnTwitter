@@ -1,24 +1,23 @@
 package twitter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter; 
+import java.util.Date;
 
 public class Tweet {
-	private String autor;
+	private int autor;
 	private String mensaje;
-	private LocalDateTime datetime;
+	private Date datetime;
 	private int responde_a;
 	private int es_retweet;
 	private int id;
 
-	public String getAutor() {
+	public int getAutor() {
 		return autor;
 	}
 
-	public void setAutor(String autor) {
+	public void setAutor(int autor) {
 		this.autor = autor;
 	}
 
-	public String getMensaje) {
+	public String getMensaje() {
 		return mensaje;
 	}
 
@@ -26,11 +25,11 @@ public class Tweet {
 		this.mensaje = mensaje;
 	}
 
-	public LocalDateTime datetime() {
+	public Date datetime() {
 		return datetime;
 	}
 
-	public void setDatetime(LocalDateTime d) {
+	public void setDatetime(Date d) {
 		this.datetime = d;
 	}
 
@@ -59,7 +58,7 @@ public class Tweet {
 	}
 
 	public String toString() {
-		DateTimeFormatter dt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-		return autor + ": " + mensaje + " (" + dt.format(datetime) + ")";
+		//DateTimeFormatter dt = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		return "";
 	}
 }
