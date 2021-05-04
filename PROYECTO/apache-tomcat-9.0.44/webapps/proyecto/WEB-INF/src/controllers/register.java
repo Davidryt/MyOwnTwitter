@@ -18,8 +18,8 @@ import javax.naming.NamingException;
 import java.sql.SQLException;
 
 
-@WebServlet("/checklogin")
-public class checklogin extends HttpServlet {
+@WebServlet("/register")
+public class register extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         
@@ -30,23 +30,30 @@ public class checklogin extends HttpServlet {
             response.sendRedirect("timeline");
         }
 		else{
-			try (DBManager db = new DBManager()) {
-			String user = request.getParameter("user");
-			String pass = request.getParameter("pass");
-			boolean checked = db.checkCredentials(user, pass);
-			if(checked){
-				session.setAttribute("usuario",user);
-				response.sendRedirect("timeline");
-			}else{
-				response.sendRedirect("login?ERROR=1");
-			}
 			
+			try (DBManager db = new DBManager()) {
+				String user = request.getParameter("userREG");
+
+				String nombre = request.getParameter("nombre");
+				String pass = request.getParameter("passREG");
+				String mail = request.getParameter("mail");
+				String bio = request.getParameter("bio");
+
+				boolean created = db.newUser(user, pass, nombre, mail, bio);
+
+				if(created){
+					session.setAttribute("usuario",user);
+					response.sendRedirect("timeline");
+				}else{
+					response.sendRedirect("login");
+				}
+				
 			} catch (SQLException | NamingException e) {
 				e.printStackTrace();
 				response.sendError(500);
 			}
-			
-		}
+
+		}		
 		
     }
 }

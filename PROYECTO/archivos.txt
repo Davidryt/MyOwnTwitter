@@ -26,3 +26,8 @@
 
 
 *** adicional: borrar tweets
+
+
+
+compilar controllers desde /src: javac -d ../classes -cp ../classes:../../../../lib/servlet-api.jar */*.java
+

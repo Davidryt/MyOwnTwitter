@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>Login</h1>
-		<form action="checklogin">
+		<form action="checklogin" method="post">
             <div>
                 <label>Usuario
                     <input type="text" name="user" placeholder="Introduzca su usuario">
@@ -23,7 +23,7 @@
         </form>
 
 		<h1>Register</h1>
-		<form action="register">
+		<form action="register" method="post">
             <div>
                 <label>Usuario
                     <input type="text" name="userREG" placeholder="Introduzca su usuario">
@@ -46,7 +46,7 @@
             </div>
 			<div>
                 <label>Bio
-                    <input type="text" name="user" placeholder="Introduzca una breve biografia">
+                    <input type="text" name="bio" placeholder="Introduzca una breve biografia">
                 </label>
             </div>
 			

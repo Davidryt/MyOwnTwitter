@@ -132,13 +132,13 @@ public class DBManager implements AutoCloseable {
 
 		if(usernameAvailable(user) && (user.length() < 255) && (password.length() < 255) && (nombre.length() < 255) && (correo.length() < 255) && (bio.length() < 255)){
 
-			PreparedStatement query = connection.prepareStatement("INSERT INTO Usuario (login, password, nombre, correo, bio) VALUES(?, ?, ?, ?, ?)" );
+			PreparedStatement query = connection.prepareStatement("INSERT INTO Usuarios (login, password, nombre, correo, bio) VALUES(?, ?, ?, ?, ?)" );
 			query.setString(1, user);
 			query.setString(2, password);
 			query.setString(3, nombre);
 			query.setString(4, correo);
 			query.setString(5, bio);
-			ResultSet rs = query.executeQuery();
+			query.executeUpdate();
 
 			return true;
 	
@@ -157,7 +157,7 @@ public class DBManager implements AutoCloseable {
 			query.setString(2, mensaje);
 			query.setInt(4, responde_a);
 			query.setInt(5, es_retweet);
-			ResultSet rs = query.executeQuery();
+			query.executeUpdate();
 
 			return true;
 	
@@ -201,7 +201,7 @@ public class DBManager implements AutoCloseable {
 		PreparedStatement query = connection.prepareStatement("INSERT INTO Seguimientos (id_seguidor, id_seguido) VALUES(?, ?)" );
 		query.setInt(1, id_seguidor);
 		query.setInt(2, id_seguido);
-		ResultSet rs = query.executeQuery();
+		query.executeUpdate();
 
 	}
 
