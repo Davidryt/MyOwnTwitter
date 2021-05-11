@@ -3,6 +3,7 @@ import java.util.Date;
 
 public class Tweet {
 	private int autor;
+	private String autor_name;
 	private String mensaje;
 	private Date datetime;
 	private int responde_a;
@@ -15,6 +16,14 @@ public class Tweet {
 
 	public void setAutor(int autor) {
 		this.autor = autor;
+	}
+
+	public String getAutor_name() {
+		return autor_name;
+	}
+
+	public void setAutor_name(String autor_name) {
+		this.autor_name = autor_name;
 	}
 
 	public String getMensaje() {

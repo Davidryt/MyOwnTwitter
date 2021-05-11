@@ -45,12 +45,11 @@ public class DBManager implements AutoCloseable {
         connection = null;
     }
 
-	public List<Tweet> getProfileTweet(String user) throws SQLException{
+	public List<Tweet> getProfileTweet(int user) throws SQLException{
 
 		ArrayList l = new ArrayList<Tweet>();
-
-		PreparedStatement query = connection.prepareStatement("SELECT * FROM Mensajes WHERE autor = ?" );
-		query.setString(1, user);
+		PreparedStatement query = connection.prepareStatement("SELECT Mensajes.id, autor, mensaje, fecha, login, responde_a, es_retweet FROM Mensajes INNER JOIN Usuarios ON Mensajes.autor=Usuarios.id WHERE autor = ? ORDER BY fecha DESC" );
+		query.setInt(1, user);
 		ResultSet rs = query.executeQuery();
 		Tweet t;
 		
@@ -58,6 +57,7 @@ public class DBManager implements AutoCloseable {
 		while(rs.next()){
 			t = new Tweet();
 			t.setAutor(rs.getInt("autor"));
+			t.setAutor_name(rs.getString("login"));
 			t.setMensaje(rs.getString("mensaje"));
 			t.setDatetime(rs.getTimestamp("fecha"));
 			t.setResponde_a(rs.getInt("responde_a"));
@@ -88,6 +88,31 @@ public class DBManager implements AutoCloseable {
 		return pass.equals(true_pwd);
 
 	}
+
+
+	public List<String> getProfile(String login) throws SQLException{
+
+		
+		List<String> info = new ArrayList<String>();
+		PreparedStatement query = connection.prepareStatement("SELECT * FROM Usuarios WHERE login = ?" );
+		query.setString(1, login);
+		ResultSet rs = query.executeQuery();
+		
+
+
+		if(rs.next()){
+			info.add(String.valueOf(rs.getInt("id")));
+			info.add(rs.getString("login"));
+			info.add(rs.getString("nombre"));
+			info.add(rs.getString("bio"));
+		}else{
+			return null;		
+		}
+		
+		return info;
+
+	}
+
 
 	public List<Tweet> getAnswers(int id) throws SQLException{ //MOSTRAR CONVERSACIÓN, CUANDO RESPUESTA_A != 0, ID=RESPUESTA_A
 
