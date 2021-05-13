@@ -194,11 +194,13 @@ public class DBManager implements AutoCloseable {
 	
 
 
-	public List<Tweet> timeline(int idUser) throws SQLException{
+	public List<Tweet> timeline(String user) throws SQLException{
 
 		ArrayList l = new ArrayList<Tweet>();
 
-		PreparedStatement query = connection.prepareStatement("SELECT Mensajes.id, Mensajes.autor, Mensajes.mensaje, Mensajes.fecha, Mensajes.responde_a, Mensajes.es_retweet" +
+		int idUser = getId(user);
+
+		PreparedStatement query = connection.prepareStatement("SELECT Mensajes.id, Mensajes.autor, Mensajes.mensaje, Mensajes.fecha, Mensajes.responde_a, Mensajes.es_retweet " +
 				"From Mensajes INNER JOIN Seguimientos ON Mensajes.autor=Seguimientos.id_seguido WHERE Seguimientos.id_seguidor= ? ORDER BY Mensajes.fecha DESC LIMIT 50" );
 		query.setInt(1, idUser);
 		ResultSet rs = query.executeQuery();
@@ -207,6 +209,7 @@ public class DBManager implements AutoCloseable {
 
 		while(rs.next()){
 			t = new Tweet();
+			t.setAutor_name(getUser(rs.getInt("autor")));
 			t.setAutor(rs.getInt("autor"));
 			t.setMensaje(rs.getString("mensaje"));
 			t.setDatetime(rs.getTimestamp("fecha"));
@@ -221,21 +224,84 @@ public class DBManager implements AutoCloseable {
 
 	}
 
-	public void follow(int id_seguidor, int id_seguido) throws SQLException{
+	public int getId(String user) throws SQLException{
 
-		PreparedStatement query = connection.prepareStatement("INSERT INTO Seguimientos (id_seguidor, id_seguido) VALUES(?, ?)" );
-		query.setInt(1, id_seguidor);
-		query.setInt(2, id_seguido);
-		query.executeUpdate();
+		PreparedStatement query = connection.prepareStatement("SELECT * FROM Usuarios WHERE login = ?" );
+
+		query.setString(1, user);
+		ResultSet rs = query.executeQuery();
+
+		int idUser = 0;
+		
+		if(rs.next()){
+			idUser = rs.getInt("id");
+		}
+
+		return idUser;
 
 	}
 
-	public void unfollow(int id_seguidor, int id_seguido) throws SQLException{
+	public String getUser(int user) throws SQLException{
 
-		PreparedStatement query = connection.prepareStatement("DELETE FROM Seguimientos WHERE id_seguidor=? AND id_seguido=?" );
+		PreparedStatement query = connection.prepareStatement("SELECT * FROM Usuarios WHERE id = ?" );
+
+		query.setInt(1, user);
+		ResultSet rs = query.executeQuery();
+
+		String str = "";
+		
+		if(rs.next()){
+			str = rs.getString("login");
+		}
+
+		return str;
+
+	}
+
+	public boolean checkFollow(String seguidor, String seguido) throws SQLException{
+
+		boolean followed = false;
+
+		int id_seguidor = getId(seguidor);
+		int id_seguido = getId(seguido);
+
+		PreparedStatement query = connection.prepareStatement("SELECT * FROM Seguimientos WHERE id_seguidor=? AND id_seguido=?" );
 		query.setInt(1, id_seguidor);
 		query.setInt(2, id_seguido);
 		ResultSet rs = query.executeQuery();
+
+		if(rs.next()){
+			followed = true;
+		}
+
+		return followed;
+
+	}
+
+
+	public void follow(String seguidor, String seguido) throws SQLException{
+
+		if(!checkFollow(seguidor, seguido)){
+			int id_seguidor = getId(seguidor);
+			int id_seguido = getId(seguido);
+			PreparedStatement query = connection.prepareStatement("INSERT INTO Seguimientos (id_seguidor, id_seguido) VALUES(?, ?)" );
+			query.setInt(1, id_seguidor);
+			query.setInt(2, id_seguido);
+			query.executeUpdate();
+		}
+
+	}
+
+	public void unfollow(String seguidor, String seguido) throws SQLException{
+
+		if(checkFollow(seguidor, seguido)){
+			int id_seguidor = getId(seguidor);
+			int id_seguido = getId(seguido);
+			PreparedStatement query = connection.prepareStatement("DELETE FROM Seguimientos WHERE id_seguidor=? AND id_seguido=?" );
+			query.setInt(1, id_seguidor);
+			query.setInt(2, id_seguido);
+			query.executeUpdate();
+		}
 
 	}
 

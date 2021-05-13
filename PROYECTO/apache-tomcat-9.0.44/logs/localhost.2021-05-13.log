@@ -1,0 +1,520 @@
+13-May-2021 12:17:45.800 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 12:17:45.800 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 12:17:45.801 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7c974942')
+13-May-2021 12:34:42.892 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 12:34:42.892 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 12:34:46.458 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 12:34:46.458 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 12:34:46.459 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7c974942')
+13-May-2021 12:35:06.943 GRAVE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.timeline] lanzó excepción
+	java.lang.IllegalStateException: No puedo llamar a sendError() tras llevar a cabo la respuesta
+		at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472)
+		at controllers.timeline.doGet(timeline.java:45)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 12:39:45.008 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 12:39:45.008 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 12:39:58.839 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 12:39:58.839 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 12:39:58.840 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7c28c1')
+13-May-2021 12:40:14.303 GRAVE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.timeline] lanzó excepción
+	java.lang.IllegalStateException: No puedo reenviar después de que la respuesta se haya llevado a cabo.
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.timeline.doGet(timeline.java:41)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 12:45:00.116 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 12:45:00.116 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 12:45:13.063 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 12:45:13.063 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 12:45:13.064 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@cda0432')
+13-May-2021 13:26:36.837 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 13:26:36.837 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 13:31:43.267 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 13:31:43.267 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 13:31:43.269 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@60921b21')
+13-May-2021 13:32:03.294 GRAVE [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [17] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to String
+14: 		<h1><%= info.get(2) %></h1>
+15: 		<h1><%= info.get(3) %></h1>
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+
+
+Ha tenido lugar un error en la línea: [19] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to boolean
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+21: 		<form action="unfollow" method="post">
+22:             <div>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 13:32:03.295 GRAVE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [controllers.profile] en el contexto con ruta [/proyecto] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [17] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to String
+14: 		<h1><%= info.get(2) %></h1>
+15: 		<h1><%= info.get(3) %></h1>
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+
+
+Ha tenido lugar un error en la línea: [19] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to boolean
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+21: 		<form action="unfollow" method="post">
+22:             <div>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [17] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to String
+14: 		<h1><%= info.get(2) %></h1>
+15: 		<h1><%= info.get(3) %></h1>
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+
+
+Ha tenido lugar un error en la línea: [19] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Type mismatch: cannot convert from Object to boolean
+16: 
+17: <% String usuario = request.getAttribute("usuario"); 	%>
+18: <% if(usuario != null) { 	%>
+19: 	<% if(request.getAttribute("followed")) { 	%>
+20: 
+21: 		<form action="unfollow" method="post">
+22:             <div>
+
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 13:33:18.533 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 13:33:18.534 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 13:34:37.100 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 13:34:37.100 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 13:34:37.101 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@7004e3d')
+13-May-2021 13:34:43.503 GRAVE [http-nio-8080-exec-1] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 13:34:43.504 GRAVE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [controllers.profile] en el contexto con ruta [/proyecto] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [24] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+21: 		<form action="unfollow" method="post">
+22:             <div>
+23:                 <label>
+24:                     <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+25:                 </label>
+26: 			</div>
+27:             <input type="submit" value="Dejar de seguir">
+
+
+Ha tenido lugar un error en la línea: [34] en el archivo jsp: [/WEB-INF/jsp/profile.jsp]
+Syntax error on token ";", delete this token
+31: 			<form action="follow" method="post">
+32: 		        <div>
+33: 		            <label>
+34: 		                <input type="hidden" name="seguido" value="<%= info.get(1); %>">
+35: 		            </label>
+36: 				</div>
+37: 		        <input type="submit" value="Seguir">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:56)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 13:38:50.128 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 13:38:50.128 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 13:39:07.181 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 13:39:07.182 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 13:39:07.183 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@67ec8477')
+13-May-2021 13:40:10.496 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.profile] lanzó excepción
+	java.lang.NullPointerException
+		at controllers.profile.doGet(profile.java:45)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+13-May-2021 13:45:36.805 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+13-May-2021 13:45:36.805 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+13-May-2021 13:46:11.369 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+13-May-2021 13:46:11.369 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+13-May-2021 13:46:11.370 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@67ec8477')

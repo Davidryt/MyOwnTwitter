@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.RequestDispatcher;
 
 import twitter.DBManager;
+import twitter.Tweet;
 
 import javax.naming.NamingException;
 import java.sql.SQLException;
@@ -24,9 +25,25 @@ public class timeline extends HttpServlet {
             throws IOException, ServletException {
         
         HttpSession session = request.getSession();
+		
+		String usuario = (String) session.getAttribute("usuario");
+        if (usuario != null) {
+            try (DBManager db = new DBManager()) {
 
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/timeline.jsp");
-		rd.forward(request, response);
+			List<Tweet> tweets = db.timeline(usuario);
+			
+			request.setAttribute("tweets", tweets);
+
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/timeline.jsp");
+			rd.forward(request, response);
+
+			} catch (SQLException | NamingException e) {
+				e.printStackTrace();
+				response.sendError(500);
+			}
+        }else
+			response.sendRedirect("login");
+		
 		
     }
 }

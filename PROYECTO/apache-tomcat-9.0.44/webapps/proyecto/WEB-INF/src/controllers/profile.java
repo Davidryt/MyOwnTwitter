@@ -32,6 +32,8 @@ public class profile extends HttpServlet {
 			rd.forward(request, response);
 		}
 		
+		String usuario = (String) session.getAttribute("usuario");
+		
 		
 		try (DBManager db = new DBManager()) {
 			List<String> info = db.getProfile(profile);
@@ -46,6 +48,9 @@ public class profile extends HttpServlet {
 			
 			request.setAttribute("info", info);
 			request.setAttribute("tweets", tweets);
+			request.setAttribute("usuario", usuario);
+			request.setAttribute("followed", db.checkFollow(usuario, profile));
+			
 
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/profile.jsp");
 			rd.forward(request, response);
