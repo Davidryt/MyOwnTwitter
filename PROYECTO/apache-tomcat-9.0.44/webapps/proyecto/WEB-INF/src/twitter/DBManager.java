@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
+import java.sql.Timestamp;
 
 import javax.naming.NamingException;
 import javax.naming.InitialContext;
@@ -173,12 +174,14 @@ public class DBManager implements AutoCloseable {
 	}
 
 
-	public boolean publicarTweet(int autor, String mensaje, int responde_a, int es_retweet) throws SQLException{
+	public boolean publicarTweet(String autor, String mensaje, int responde_a, int es_retweet) throws SQLException{
 
+		
 		if(mensaje.length() <= 255){
 
+			int id = getId(autor);
 			PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha, responde_a, es_retweet) VALUES(?, ?, NOW(), ?, ?)" );
-			query.setInt(1, autor);
+			query.setInt(1, id);
 			query.setString(2, mensaje);
 			query.setInt(4, responde_a);
 			query.setInt(5, es_retweet);
@@ -190,9 +193,72 @@ public class DBManager implements AutoCloseable {
 	
 		return false;
 	}
-
 	
+	public boolean publicarTweet(String autor, String mensaje) throws SQLException{
 
+		
+		if(mensaje.length() <= 255){
+
+			int id = getId(autor);
+			PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha) VALUES(?, ?, NOW())" );
+			query.setInt(1, id);
+			query.setString(2, mensaje);
+			query.executeUpdate();
+
+			return true;
+	
+		}
+	
+		return false;
+	}	
+
+	public void retweet(String user, int idTweet) throws SQLException{
+
+		Tweet t = getTweet(idTweet);
+		int idUser = getId(user);
+		int rt;
+
+		if(t.getEs_retweet() != 0){
+			rt = t.getEs_retweet();
+		}else{
+			rt = idTweet;
+		}
+
+		PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha, es_retweet) VALUES(?, ?, ?, ?)" );
+		query.setInt(1, idUser);
+		query.setString(2, t.getMensaje());
+		query.setTimestamp(3, new Timestamp(t.datetime().getTime()));
+		query.setInt(4, rt);
+		query.executeUpdate();
+
+
+	}
+
+	public Tweet getTweet(int id) throws SQLException{
+
+		PreparedStatement query = connection.prepareStatement("SELECT * FROM Mensajes WHERE id = ?" );
+
+		query.setInt(1, id);
+		ResultSet rs = query.executeQuery();
+		
+		Tweet t;
+
+		if(rs.next()){
+			t = new Tweet();
+			t.setAutor_name(getUser(rs.getInt("autor")));
+			t.setAutor(rs.getInt("autor"));
+			t.setMensaje(rs.getString("mensaje"));
+			t.setDatetime(rs.getTimestamp("fecha"));
+			t.setResponde_a(rs.getInt("responde_a"));
+			t.setEs_retweet(rs.getInt("es_retweet"));
+			t.setId(rs.getInt("id"));
+		}else{
+			return null;
+		}
+
+		return t;
+
+	}
 
 	public List<Tweet> timeline(String user) throws SQLException{
 
@@ -203,6 +269,7 @@ public class DBManager implements AutoCloseable {
 		PreparedStatement query = connection.prepareStatement("SELECT Mensajes.id, Mensajes.autor, Mensajes.mensaje, Mensajes.fecha, Mensajes.responde_a, Mensajes.es_retweet " +
 				"From Mensajes INNER JOIN Seguimientos ON Mensajes.autor=Seguimientos.id_seguido WHERE Seguimientos.id_seguidor= ? ORDER BY Mensajes.fecha DESC LIMIT 50" );
 		query.setInt(1, idUser);
+		query.setInt(2, idUser);
 		ResultSet rs = query.executeQuery();
 		Tweet t;
 		
@@ -303,6 +370,22 @@ public class DBManager implements AutoCloseable {
 			query.executeUpdate();
 		}
 
+	}
+
+	public int rtCount(int id) throws SQLException{
+
+		int c = 0;
+
+		PreparedStatement query = connection.prepareStatement("SELECT COUNT(id) FROM Mensajes WHERE es_retweet=?" );
+		query.setInt(1, id);
+		ResultSet rs = query.executeQuery();
+
+		if(rs.next()){
+			c = rs.getInt("COUNT(id)");
+		}
+
+		return c;
+		
 	}
 
 }
