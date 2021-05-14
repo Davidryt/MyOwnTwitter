@@ -24,20 +24,20 @@
 
 TO DO:
 	poner cosas bonitas
-
-	profile:
-	- retweets
 	vista de mensaje
 	funcionalidad de responder
-	timeline: form twitear
 	poner acceso a timeline si sesión iniciada
-	
+	retweets: poner enlace a original y counter
+	no poder seguirse a uno mismo
 
-*** preguntar si podemos acceder a la sesión dentro del jsp
+
 
 *** adicional: borrar tweets
 
 
 
 compilar controllers desde /src: javac -d ../classes -cp ../classes:../../../../lib/servlet-api.jar */*.java
+
+
+
 

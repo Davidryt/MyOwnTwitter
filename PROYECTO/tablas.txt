@@ -51,6 +51,5 @@ CREATE TABLE Seguimientos(
 	REFERENCES Usuarios(id)
 );
 
-SELECT Mensajes.id, Mensajes.autor, Mensajes.mensaje, Mensajes.fecha, Mensajes.responde_a, Mensajes.es_retweet From Mensajes INNER JOIN Seguimientos ON Mensajes.autor=Seguimientos.id_seguido WHERE Seguimientos.id_seguidor= 1 ORDER BY Mensajes.fecha DESC LIMIT 50
 
 

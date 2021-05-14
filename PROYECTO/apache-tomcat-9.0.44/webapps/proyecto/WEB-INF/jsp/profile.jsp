@@ -47,7 +47,10 @@
                 <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
 				<label> <%= tweet.getMensaje() %></label>
 				<label> <%= tweet.datetime() %></label>
-                
+                <form action="retransmision" method="post">
+						<input type="hidden" name="mensaje" value="<%= tweet.getId() %>">
+				    <input type="submit" value="RTx">
+				</form>
         </div>
 <% } %>
     </body>
