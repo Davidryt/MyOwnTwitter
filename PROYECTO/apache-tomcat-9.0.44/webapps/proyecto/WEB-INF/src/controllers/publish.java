@@ -26,10 +26,16 @@ public class publish extends HttpServlet {
         HttpSession session = request.getSession();
 
 		String usuario = (String) session.getAttribute("usuario");
+		int responde_a = Integer.parseInt(request.getParameter("responde_a"));
         if (usuario != null) {
             try (DBManager db = new DBManager()) {
-				db.publicarTweet(usuario, request.getParameter("mensaje"));
-				response.sendRedirect("timeline");
+				if(responde_a == 0){
+					db.publicarTweet(usuario, request.getParameter("mensaje"));
+					response.sendRedirect("timeline");
+				}else{
+					db.publicarTweet(usuario, request.getParameter("mensaje"),responde_a);
+					response.sendRedirect("conversacion?id_msg="+responde_a);
+				}
 			} catch (SQLException | NamingException e) {
 				e.printStackTrace();
 				response.sendError(500);

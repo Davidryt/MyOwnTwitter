@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Profile does NOT EXIST</title>
+        <title>Tweet does NOT EXIST</title>
     </head>
     <body>
-	
+		
 	<% String usuario = (String) request.getAttribute("usuario"); 	%>	
 	<% if(usuario != null ) { 	%>
 		<p>
@@ -24,7 +24,7 @@
 	<% } %>
 
 
-        <h1>USUARIO NO ENCONTRADO</h1>
+        <h1>TWEET NO ENCONTRADO</h1>
 		
     </body>
 </html>

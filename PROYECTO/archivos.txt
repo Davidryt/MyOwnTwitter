@@ -24,11 +24,7 @@
 
 TO DO:
 	poner cosas bonitas
-	vista de mensaje
-	funcionalidad de responder
-	poner acceso a timeline si sesión iniciada
-	retweets: poner enlace a original y counter
-	no poder seguirse a uno mismo
+	retweets:  counter
 
 
 

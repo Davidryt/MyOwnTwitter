@@ -8,6 +8,13 @@
         <title>Timeline</title>
     </head>
     <body>
+		<p>
+			<form action="logout">
+		        <input type="submit" value="Cerrar Sesión">
+		    </form>
+
+		</p>
+
         <h1>TIMELINE</h1>
 
 		<div>
@@ -23,7 +30,7 @@
 <% for (Tweet tweet: tweets) { %>
         <div>				
                 <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
-				<label> <%= tweet.getMensaje() %></label>
+				<a href="conversacion?id_msg=<%=tweet.getId() %>"> <%= tweet.getMensaje() %></a>
 				<label> <%= tweet.datetime() %></label>
                 <form action="retransmision" method="post">
 						<input type="hidden" name="idMensaje" value="<%= tweet.getId() %>">

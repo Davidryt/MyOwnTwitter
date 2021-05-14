@@ -128,6 +128,7 @@ public class DBManager implements AutoCloseable {
 		while(rs.next()){
 			t = new Tweet();
 			t.setAutor(rs.getInt("autor"));
+			t.setAutor_name(getUser(rs.getInt("autor")));
 			t.setMensaje(rs.getString("mensaje"));
 			t.setDatetime(rs.getTimestamp("fecha"));
 			t.setResponde_a(rs.getInt("responde_a"));
@@ -165,6 +166,8 @@ public class DBManager implements AutoCloseable {
 			query.setString(4, correo);
 			query.setString(5, bio);
 			query.executeUpdate();
+
+			follow(user,user);
 
 			return true;
 	
@@ -212,6 +215,26 @@ public class DBManager implements AutoCloseable {
 		return false;
 	}	
 
+
+	public boolean publicarTweet(String autor, String mensaje, int responde_a) throws SQLException{
+
+		
+		if(mensaje.length() <= 255){
+
+			int id = getId(autor);
+			PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha, responde_a) VALUES(?, ?, NOW(), ?)" );
+			query.setInt(1, id);
+			query.setString(2, mensaje);
+			query.setInt(3, responde_a);
+			query.executeUpdate();
+
+			return true;
+	
+		}
+	
+		return false;
+	}
+
 	public void retweet(String user, int idTweet) throws SQLException{
 
 		Tweet t = getTweet(idTweet);
@@ -224,11 +247,10 @@ public class DBManager implements AutoCloseable {
 			rt = idTweet;
 		}
 
-		PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha, es_retweet) VALUES(?, ?, ?, ?)" );
+		PreparedStatement query = connection.prepareStatement("INSERT INTO Mensajes (autor, mensaje, fecha, es_retweet) VALUES(?, ?, NOW(), ?)" );
 		query.setInt(1, idUser);
 		query.setString(2, t.getMensaje());
-		query.setTimestamp(3, new Timestamp(t.datetime().getTime()));
-		query.setInt(4, rt);
+		query.setInt(3, rt);
 		query.executeUpdate();
 
 
@@ -242,6 +264,10 @@ public class DBManager implements AutoCloseable {
 		ResultSet rs = query.executeQuery();
 		
 		Tweet t;
+		
+		if(rs==null){
+			return null;
+		}
 
 		if(rs.next()){
 			t = new Tweet();
@@ -269,7 +295,6 @@ public class DBManager implements AutoCloseable {
 		PreparedStatement query = connection.prepareStatement("SELECT Mensajes.id, Mensajes.autor, Mensajes.mensaje, Mensajes.fecha, Mensajes.responde_a, Mensajes.es_retweet " +
 				"From Mensajes INNER JOIN Seguimientos ON Mensajes.autor=Seguimientos.id_seguido WHERE Seguimientos.id_seguidor= ? ORDER BY Mensajes.fecha DESC LIMIT 50" );
 		query.setInt(1, idUser);
-		query.setInt(2, idUser);
 		ResultSet rs = query.executeQuery();
 		Tweet t;
 		

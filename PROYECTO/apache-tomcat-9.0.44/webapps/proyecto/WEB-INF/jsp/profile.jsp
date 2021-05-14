@@ -9,15 +9,29 @@
         <title>Profile</title>
     </head>
     <body>
+	<% String usuario = (String) request.getAttribute("usuario"); 	%>	
+	<% if(usuario != null ) { 	%>
+		<p>
+			<form action="logout">
+		        <input type="submit" value="Cerrar Sesión">
+		    </form>
+			<form action="timeline">
+		        <input type="submit" value="Ir a Vista Principal">
+		    </form>
+
+		</p>
+	<% } %>
+
+
 <% List<String> info = (List<String>) request.getAttribute("info"); %>
         <h1><%= info.get(1) %></h1>
 		<h1><%= info.get(2) %></h1>
 		<h1><%= info.get(3) %></h1>
 
-<% String usuario = (String) request.getAttribute("usuario"); 	%>
-<% if(usuario != null) { 	%>
-	<% if((boolean) request.getAttribute("followed")) { 	%>
 
+<% if(usuario != null ) { 	%>
+  <% if(!(usuario.equals(info.get(1))) ) { 	%>
+	<% if((boolean) request.getAttribute("followed")) { 	%>
 		<form action="unfollow" method="post">
             <div>
                 <label>
@@ -38,14 +52,14 @@
 		    </form>
 
 	<% } %>
-
+  <% } %>
 <% } %>
 
 <% List<Tweet> tweets = (List<Tweet>) request.getAttribute("tweets"); %>
 <% for (Tweet tweet: tweets) { %>
         <div>				
                 <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
-				<label> <%= tweet.getMensaje() %></label>
+				<a href="conversacion?id_msg=<%=tweet.getId() %>"> <%= tweet.getMensaje() %></a>
 				<label> <%= tweet.datetime() %></label>
                 <form action="retransmision" method="post">
 						<input type="hidden" name="mensaje" value="<%= tweet.getId() %>">
