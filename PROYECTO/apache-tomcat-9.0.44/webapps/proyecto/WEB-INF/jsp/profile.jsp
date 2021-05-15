@@ -61,10 +61,16 @@
                 <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
 				<a href="conversacion?id_msg=<%=tweet.getId() %>"> <%= tweet.getMensaje() %></a>
 				<label> <%= tweet.datetime() %></label>
+				<label> <%= tweet.datetime() %></label>
+				<% if (tweet.getEs_retweet() != 0) { %>
+				 <a href="conversacion?id_msg=<%=tweet.getEs_retweet() %>"> Ver tweet original </a>
+				<% } %>
+				<% if(usuario != null ) { 	%>
                 <form action="retransmision" method="post">
 						<input type="hidden" name="mensaje" value="<%= tweet.getId() %>">
 				    <input type="submit" value="RTx">
 				</form>
+				<% } %>
         </div>
 <% } %>
     </body>

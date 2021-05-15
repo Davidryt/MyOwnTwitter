@@ -1,51 +1,3 @@
-14-May-2021 18:13:49.495 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.44
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 4 2021 21:49:34 UTC
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.44.0
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      5.2.0
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/oracle-java8-jdk-amd64/jre
-14-May-2021 18:13:49.498 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       1.8.0_141-b15
-14-May-2021 18:13:49.499 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
-14-May-2021 18:13:49.499 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44
-14-May-2021 18:13:49.499 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44
-14-May-2021 18:13:49.499 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/usr/lab/alum/0384036/WebCom/PROYECTO/apache-tomcat-9.0.44/conf/logging.properties
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/usr/lab/alum/0384036/WebCom/PROYECTO/apache-tomcat-9.0.44
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/usr/lab/alum/0384036/WebCom/PROYECTO/apache-tomcat-9.0.44
-14-May-2021 18:13:49.500 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/usr/lab/alum/0384036/WebCom/PROYECTO/apache-tomcat-9.0.44/temp
-14-May-2021 18:13:49.502 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-14-May-2021 18:13:49.866 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
-
-14-May-2021 18:13:49.898 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [607] milliseconds
-14-May-2021 18:13:49.930 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
-14-May-2021 18:13:49.930 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.44]
-14-May-2021 18:13:49.942 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/ROOT] de la aplicación web
-14-May-2021 18:13:50.220 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/ROOT] has finished in [276] ms
-14-May-2021 18:13:50.220 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/bookshop] de la aplicación web
-14-May-2021 18:13:50.571 ADVERTENCIA [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = BookShop Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
-14-May-2021 18:13:50.601 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
-14-May-2021 18:13:50.605 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/bookshop] has finished in [385] ms
-14-May-2021 18:13:50.606 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/docs] de la aplicación web
-14-May-2021 18:13:50.624 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/docs] has finished in [18] ms
-14-May-2021 18:13:50.625 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/examples] de la aplicación web
-14-May-2021 18:13:51.125 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/examples] has finished in [500] ms
-14-May-2021 18:13:51.126 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/holamundo] de la aplicación web
-14-May-2021 18:13:51.161 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/holamundo] has finished in [34] ms
-14-May-2021 18:13:51.161 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/host-manager] de la aplicación web
-14-May-2021 18:13:51.199 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/host-manager] has finished in [37] ms
-14-May-2021 18:13:51.199 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/manager] de la aplicación web
-14-May-2021 18:13:51.237 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/manager] has finished in [37] ms
-14-May-2021 18:13:51.237 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/proyecto] de la aplicación web
-14-May-2021 18:13:51.514 ADVERTENCIA [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = Twitter Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "8" for "maxActive" property, which is being ignored.
-14-May-2021 18:13:51.529 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
-14-May-2021 18:13:51.548 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/proyecto] has finished in [311] ms
-14-May-2021 18:13:51.553 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
-14-May-2021 18:13:51.563 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [1664] milliseconds
 15-May-2021 20:48:27.609 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.44
 15-May-2021 20:48:27.612 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Mar 4 2021 21:49:34 UTC
 15-May-2021 20:48:27.612 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.44.0
@@ -94,7 +46,6 @@
 15-May-2021 20:48:31.561 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/121/computacion_web/repositorio/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/ROOT] has finished in [41] ms
 15-May-2021 20:48:31.568 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 15-May-2021 20:48:31.575 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [3553] milliseconds
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
 15-May-2021 20:54:37.681 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
 15-May-2021 20:54:37.682 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
 15-May-2021 20:54:37.689 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
@@ -184,4 +135,3 @@ Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class 
 15-May-2021 20:54:41.976 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/var/home/lab/alum0/03/84/121/computacion_web/repositorio/WebCom/PROYECTO/apache-tomcat-9.0.44/webapps/ROOT] has finished in [19] ms
 15-May-2021 20:54:41.981 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 15-May-2021 20:54:42.000 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [1503] milliseconds
-Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
