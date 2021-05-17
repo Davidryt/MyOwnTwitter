@@ -26,7 +26,11 @@ public class publish extends HttpServlet {
         HttpSession session = request.getSession();
 
 		String usuario = (String) session.getAttribute("usuario");
-		int responde_a = Integer.parseInt(request.getParameter("responde_a"));
+		int responde_a;
+		if(request.getParameter("responde_a") != null)
+			responde_a = Integer.parseInt(request.getParameter("responde_a"));
+		else 
+			responde_a = 0;
         if (usuario != null) {
             try (DBManager db = new DBManager()) {
 				if(responde_a == 0){

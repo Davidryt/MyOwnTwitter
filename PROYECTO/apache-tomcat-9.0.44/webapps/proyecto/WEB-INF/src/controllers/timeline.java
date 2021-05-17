@@ -34,6 +34,9 @@ public class timeline extends HttpServlet {
 			
 			request.setAttribute("tweets", tweets);
 
+			List<Integer> rts = db.rtCountList(tweets);
+			request.setAttribute("rts", rts);
+
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/timeline.jsp");
 			rd.forward(request, response);
 

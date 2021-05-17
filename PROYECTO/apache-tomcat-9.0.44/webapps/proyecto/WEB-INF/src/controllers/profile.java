@@ -46,7 +46,12 @@ public class profile extends HttpServlet {
 			
 			String aux = info.get(0);
 			int user = Integer.parseInt(aux);
+			int n_followers = db.followersCount(user);
 			List<Tweet> tweets = db.getProfileTweet(user);
+
+			List<Integer> rts = db.rtCountList(tweets);
+			request.setAttribute("rts", rts);
+			request.setAttribute("followers", n_followers);
 			
 			request.setAttribute("info", info);
 			request.setAttribute("tweets", tweets);

@@ -22,11 +22,12 @@
 		</p>
 	<% } %>
 
-
+<% int followers = (int) request.getAttribute("followers"); %>
 <% List<String> info = (List<String>) request.getAttribute("info"); %>
         <h1><%= info.get(1) %></h1>
 		<h1><%= info.get(2) %></h1>
 		<h1><%= info.get(3) %></h1>
+		<h3><%= followers %> seguidores</h3>
 
 
 <% if(usuario != null ) { 	%>
@@ -56,21 +57,23 @@
 <% } %>
 
 <% List<Tweet> tweets = (List<Tweet>) request.getAttribute("tweets"); %>
-<% for (Tweet tweet: tweets) { %>
+<% List<Integer> rts = (List<Integer>) request.getAttribute("rts"); %>
+<% for (int i=0; i<tweets.size(); i++) { %>
         <div>				
-                <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
-				<a href="conversacion?id_msg=<%=tweet.getId() %>"> <%= tweet.getMensaje() %></a>
-				<label> <%= tweet.datetime() %></label>
-				<label> <%= tweet.datetime() %></label>
-				<% if (tweet.getEs_retweet() != 0) { %>
-				 <a href="conversacion?id_msg=<%=tweet.getEs_retweet() %>"> Ver tweet original </a>
+                <a href="profile?profile=<%=tweets.get(i).getAutor_name() %>"> <%= tweets.get(i).getAutor_name() %> </a>
+				<a href="conversacion?id_msg=<%=tweets.get(i).getId() %>"> <%= tweets.get(i).getMensaje() %></a>
+				<label> <%= tweets.get(i).datetime() %></label>
+				<label> <%= tweets.get(i).datetime() %></label>
+				<% if (tweets.get(i).getEs_retweet() != 0) { %>
+				 <a href="conversacion?id_msg=<%=tweets.get(i).getEs_retweet() %>"> Ver tweets original </a>
 				<% } %>
 				<% if(usuario != null ) { 	%>
                 <form action="retransmision" method="post">
-						<input type="hidden" name="mensaje" value="<%= tweet.getId() %>">
+						<input type="hidden" name="idMensaje" value="<%= tweets.get(i).getId() %>">
 				    <input type="submit" value="RTx">
 				</form>
 				<% } %>
+				<label> <%= rts.get(i) %> retransmisiones</label>
         </div>
 <% } %>
     </body>

@@ -25,16 +25,21 @@
 
 
 <% Tweet original = (Tweet) request.getAttribute("original"); 	%>
+<% Integer rts_original = (Integer) request.getAttribute("rts_original"); 	%>
 
 		<div>				
                 <a href="profile?profile=<%=original.getAutor_name() %>"> <%= original.getAutor_name() %> </a>
 				<a href="conversacion?id_msg=<%=original.getId() %>"> <%= original.getMensaje() %></a>
 				<label> <%= original.datetime() %></label>
+				<% if (original.getEs_retweet() != 0) { %>
+				 <a href="conversacion?id_msg=<%=original.getEs_retweet() %>"> Ver tweet original </a>
+				<% } %>
 <% if(usuario != null ) { 	%>
                 <form action="retransmision" method="post">
-						<input type="hidden" name="mensaje" value="<%= original.getId() %>">
+						<input type="hidden" name="idMensaje" value="<%= original.getId() %>">
 				    <input type="submit" value="RTx">
 				</form>
+				<label> <%= rts_original %> retransmisiones</label>
 
 
         </div>
@@ -51,17 +56,19 @@
  <% } %>
 
 <% List<Tweet> answers = (List<Tweet>) request.getAttribute("answers"); %>
-<% for (Tweet tweet: answers) { %>
+<% List<Integer> rts = (List<Integer>) request.getAttribute("rts"); %>
+<% for (int i=0; i<answers.size(); i++) { %>
         <div>				
-                <a href="profile?profile=<%=tweet.getAutor_name() %>"> <%= tweet.getAutor_name() %> </a>
-				<a href="conversacion?id_msg=<%=tweet.getId() %>"> <%= tweet.getMensaje() %></a>
-				<label> <%= tweet.datetime() %></label>
+                <a href="profile?profile=<%=answers.get(i).getAutor_name() %>"> <%= answers.get(i).getAutor_name() %> </a>
+				<a href="conversacion?id_msg=<%=answers.get(i).getId() %>"> <%= answers.get(i).getMensaje() %></a>
+				<label> <%= answers.get(i).datetime() %></label>
 <% if(usuario != null ) { 	%>
                 <form action="retransmision" method="post">
-						<input type="hidden" name="mensaje" value="<%= tweet.getId() %>">
+						<input type="hidden" name="idMensaje" value="<%= answers.get(i).getId() %>">
 				    <input type="submit" value="RTx">
 				</form>
   <% } %>
+				<label> <%= rts.get(i) %> retransmisiones</label>
         </div>
 <% } %>
 

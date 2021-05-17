@@ -50,7 +50,12 @@ public class conversacion extends HttpServlet {
 					request.setAttribute("answers", answers);
 					request.setAttribute("usuario", usuario);
 
-				
+					int rts_original = db.rtCount(original);
+					request.setAttribute("rts_original", rts_original);		
+
+					List<Integer> rts = db.rtCountList(answers);
+					request.setAttribute("rts", rts);				
+
 					RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/conversacion.jsp");
 					rd.forward(request, response);
 				

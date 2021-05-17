@@ -397,9 +397,23 @@ public class DBManager implements AutoCloseable {
 
 	}
 
-	public int rtCount(int id) throws SQLException{
+
+	public List<Integer> rtCountList(List<Tweet> tweets) throws SQLException{
+
+		List<Integer> rts = new ArrayList<Integer>();
+
+		for(int i = 0; i<tweets.size(); i++){
+			rts.add(rtCount(tweets.get(i)));
+		}
+
+		return rts;
+
+	}
+
+	public int rtCount(Tweet t) throws SQLException{
 
 		int c = 0;
+		int id = t.getId();
 
 		PreparedStatement query = connection.prepareStatement("SELECT COUNT(id) FROM Mensajes WHERE es_retweet=?" );
 		query.setInt(1, id);
@@ -410,6 +424,22 @@ public class DBManager implements AutoCloseable {
 		}
 
 		return c;
+		
+	}
+
+	public int followersCount(int id) throws SQLException{
+
+		int c = 0;
+
+		PreparedStatement query = connection.prepareStatement("SELECT COUNT(id_seguido) FROM Seguimientos WHERE id_seguido=?" );
+		query.setInt(1, id);
+		ResultSet rs = query.executeQuery();
+
+		if(rs.next()){
+			c = rs.getInt("COUNT(id_seguido)");
+		}
+
+		return c-1;
 		
 	}
 
