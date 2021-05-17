@@ -27,10 +27,12 @@ public class profile extends HttpServlet {
         HttpSession session = request.getSession();
 		String usuario = (String) session.getAttribute("usuario");
 		String profile = (String) request.getParameter("profile");
-		if (profile == null){
+		if (profile == null && usuario == null){
 			request.setAttribute("usuario", usuario);
 			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/profile_error.jsp");
 			rd.forward(request, response);
+		}else if (profile == null){
+			profile=usuario;
 		}
 		
 		

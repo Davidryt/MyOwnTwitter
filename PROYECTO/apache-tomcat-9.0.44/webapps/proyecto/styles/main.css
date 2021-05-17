@@ -1,0 +1,102 @@
+
+.timetable {
+	padding-top: 132px;
+	padding-left: 5%;
+	padding-right: 1%;
+}
+
+.options {
+	padding-top: 100px;
+	padding-left: 5%;
+	padding-right: 1%;
+}
+
+.calendar {
+	padding-top: 132px;
+	padding-left: 12%;
+	padding-right: 5%;
+}
+
+.big{
+	padding-left: 20%;
+	padding-right: 20%;
+	text-align:center;
+}
+
+#percentage{
+		padding-top:50px;
+	}
+.tweets{
+		width:100%;
+		text-align: left;
+		padding: 10px;
+	}
+
+.fila{
+		
+	}
+
+.columna1{
+		width:50%;
+		text-align: left;
+	}
+.columna2{
+		width:25%;
+		text-align: left;
+	}
+.columna3{
+		width:25%;
+		text-align: left;
+	}
+
+.todo{
+	padding-bottom: 40px;
+	}
+
+.publicar {
+	padding-bottom: 20px;
+	padding-top: 120px;
+}
+
+.publicar a {
+	font-size: 14px;
+}
+
+.flex-container {
+	display: flex;
+	grid-gap: 30px;
+}
+
+.flex-container-2 {
+	display: flex;
+}
+			
+.flex-child {
+	flex: 1;
+}  
+
+.flex-child:first-child {
+	margin-right: 20px;
+} 
+			
+.float-container {
+	padding: 5px;
+}
+
+.float-child {
+	width: 100%;
+	float: center;
+	padding: 5px;
+} 
+.float-child.green {
+	margin-right: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    #percentage{
+		display:none;
+	}
+	#capper{
+		display:none;
+	}
+}

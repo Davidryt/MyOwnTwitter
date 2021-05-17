@@ -34,6 +34,7 @@ TO DO:
 
 compilar controllers desde /src: javac -d ../classes -cp ../classes:../../../../lib/servlet-api.jar */*.java
 
+PREGUNTAR PATH RELATIVOS PROFILE Y ESAS COSAS
 
 
 

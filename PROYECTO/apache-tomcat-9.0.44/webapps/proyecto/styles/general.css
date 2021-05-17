@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+a {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+p,
+li {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This is the style for the main logo of the web page, in the upper left corner.*/
+
+.flag{
+	width: 40px;
+}
+
+.RT{
+	border-radius: 10%;
+	font-size:15px;
+	background-image: url("../images/rt1.jpg");
+}
+
+#block_container2
+{
+	margin-top: 100%;
+    text-align:center;
+}
+
+
+@media screen and (max-height: 750px) {
+  #block_container2{
+	margin-top: 20px;
+    text-align:center;
+	}
+}
+
+
+ #blocfl1, #blocfl2
+{
+    display:inline-block;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+
+
+.logout{
+    font-size: 18px;
+    border-radius: 4px;
+	background-color: #E54648;
+	height:40px;
+	margin-top:-100px;
+	
+}
+
+.course-logo {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+/*Fixed footer in the lower part of the web */
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+	height: 30px; 
+    width: 100%;
+    background-color: #1DA1F2;
+    color: #add8e6;
+	/*border-radius: 20px;*/
+    text-align: right;
+	vertical-align: middle;
+	
+}
+
+#footer a{
+	vertical-align: middle;
+	text-decoration: none;
+	color: #010E77;
+	margin-right: 20px;
+}
+/*We created a flotating side menu, that keeps fixed while scrolling. 
+When we are at a certain, page, we set it bold, and when mouse is over it, it gets underlined */
+#side-menu {
+    padding-top: 132px;
+    float: left;
+    width: 25%;
+	margin-left: -10px;
+    position: fixed;
+}
+
+#side-menu div div {
+    margin: 1em;
+	margin-left: 30px;
+	margin-right: 30px;
+    /*border-style: solid;*/
+	height:  30px; 
+    text-align: center;
+	padding-top: 2px;
+    border-radius: 10px;
+    background-color: #85a1c1;
+}
+
+#side-menu a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#side-menu a:hover {
+    text-decoration: underline;
+}
+
+#side-menu a.active {
+    font-weight: bold;
+}
+
+.content-img {
+    max-width: 50%;
+    border-radius: 5px;
+}
+/*Our lastest news feed, on the right*/
+#latest-news {
+    padding-top: 120px;
+    float: left;
+    text-align: justify;
+    padding-left: 20px;
+}
+/*This is refered to the main div in the center*/
+#course-contents {
+    padding-top: 120px;
+    float: left;
+}
+
+.menu-img {    
+    width: 40px;
+}
+
+.profpic {
+    width: 80px;
+}
+
+/*We also created a fixed header with buttons on the left*/
+.header {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+	z-index: 99999;
+    background-color: #1DA1F2;
+    padding: 20px 10px;
+    margin-top: -16px;
+	margin-left: -8px;
+    /*border-style: solid;*/
+    /*border-radius: 20px;*/
+    text-align: center;
+}
+
+.header a {
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.title {
+    font-size: 20px;
+    font-weight: bold;
+	color: #010E77;
+}
+
+.header a.title2 {
+    font-size: 15px;
+    font-weight: bold;
+	color: #010E77;
+}
+
+.header a.buttons:hover {
+    background-color: #c6ccd8;
+    color: black;
+}
+
+.header a.active {
+    background-color: #c6ccd8;
+    color: black;
+}
+
+/*This menu appears when phone mode enabled, and shows a hamburguer*/
+
+
+
+/*used to set col sizes and responsiveness*/
+[class*="col-"] {
+    float: left;
+    width: 100%;
+}
+/*This ensures that the content is bot hidden by*/
+#spacer {
+    margin-top: 15%;
+}
+/*Phone especific measures (hide image show hamburger, margins, etc)*/
+@media screen and (max-width: 600px) {
+    /*SMART*/
+	.sidenav {
+	margin-top: 150px;
+	}
+	
+    #course-contents {
+        padding-top: 250px;
+        width: 100%;
+    }
+    #latest-news {
+        width: 100%;
+        padding-top: 10px;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+    .menu-img {
+        display: block;
+    }
+    .course-logo {
+        display: none;
+    }
+    #side-menu {
+        display: none;
+    }
+    #fake-space {
+        display: none;
+    }
+    #spacer_2 {
+        margin-top: 25%;
+    }
+}
+/*tablet column divisions*/
+@media screen and (max-width: 768px) and (min-width: 600px) {
+   
+	.menu-img {
+        display: block;
+    }
+	
+	.header a.title{
+		font-size: 19px;
+	}
+	.col-t-1 {
+        width: 8.33%;
+    }
+    .col-t-2 {
+        width: 16.66%;
+    }
+    .col-t-3 {
+        width: 25%;
+    }
+    .col-t-4 {
+        width: 33.33%;
+    }
+    .col-t-5 {
+        width: 41.66%;
+    }
+    .col-t-6 {
+        width: 50%;
+    }
+    .col-t-7 {
+        width: 58.33%;
+    }
+    .col-t-8 {
+        width: 66.66%;
+    }
+    .col-t-9 {
+        width: 75%;
+    }
+    .col-t-10 {
+        width: 83.33%;
+    }
+    .col-t-11 {
+        width: 91.66%;
+    }
+    .col-t-12 {
+        width: 100%;
+    }
+	#spacer {
+    margin-top: 0%;
+}
+	#spacer_2 {
+        margin-top: 25%;
+    }
+}
+/*Desktop column division*/
+@media only screen and (min-width: 769px) {
+    /*FOR DESKTOP*/
+	
+	
+	.menu-img {
+        display: block;
+    }
+	
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}

@@ -1,0 +1,330 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+h2,h3{
+	color: #FFFFFF;
+	padding-top: 20px;
+	text-align: center;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #1DA1F2;
+  color: #ffffff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 24px;
+
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+	height: 30px; 
+    width: 100%;
+    background-color: #add8e6;
+    color: #1DA1F2;
+	/*border-radius: 20px;*/
+    text-align: right;
+	vertical-align: middle;
+	
+}
+
+.inside_button{
+	background-color: #1DA1F2;
+  color: #ffffff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 24px;
+}
+
+#footer a{
+	vertical-align: middle;
+	text-decoration: none;
+	color: #010E77;
+	margin-right: 20px;
+}
+
+
+
+
+.uc3mlogo{
+	width: 250px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.clearfixv1{
+	margin: 15px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfixv1::after {
+  content: "";
+  clear: both;
+  display: table;
+}	
+
+	
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.main_but{
+	width:150px;
+	margin:5px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  float:left;
+  width: 49%;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+.container_forg {
+  padding-bottom: 50px;
+  
+}
+
+
+#minihead
+{
+	margin-top: -20px;
+	margin-left: -20px;
+	height: 130px;
+	background-color: #1DA1F2;
+}
+
+#block_container
+{
+	margin-top: 150px;
+    text-align:center;
+}
+#bloc1, #bloc2
+{
+    display:inline-block;
+	vertical-align: middle;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+  float: left;
+  width: 49%;
+	margin-left: 10px
+	
+}
+
+span.psw {
+  float: right;
+  padding-right: 40px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+.signupbtn {
+	width: 100%;
+ }
+  
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+   
+	.header a.title{
+		font-size: 19px;
+	}
+	.col-t-1 {
+        width: 8.33%;
+    }
+    .col-t-2 {
+        width: 16.66%;
+    }
+    .col-t-3 {
+        width: 25%;
+    }
+    .col-t-4 {
+        width: 33.33%;
+    }
+    .col-t-5 {
+        width: 41.66%;
+    }
+    .col-t-6 {
+        width: 50%;
+    }
+    .col-t-7 {
+        width: 58.33%;
+    }
+    .col-t-8 {
+        width: 66.66%;
+    }
+    .col-t-9 {
+        width: 75%;
+    }
+    .col-t-10 {
+        width: 83.33%;
+    }
+    .col-t-11 {
+        width: 91.66%;
+    }
+    .col-t-12 {
+        width: 100%;
+    }
+	.col-t-13 {
+        width: 120%;
+    }
+	#spacer {
+    margin-top: 0%;
+}
+	#spacer_2 {
+        margin-top: 25%;
+    }
+}
+/*Desktop column division*/
+@media only screen and (min-width: 769px) {
+    /*FOR DESKTOP*/
+	
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+	.col-13 {
+        width: 102%;
+    }
+}

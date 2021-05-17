@@ -1,0 +1,340 @@
+18-May-2021 00:22:34.646 GRAVE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.profile] lanzó excepción
+	java.lang.IllegalStateException: No puedo reenviar después de que la respuesta se haya llevado a cabo.
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:44)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+18-May-2021 00:26:35.287 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+18-May-2021 00:26:35.287 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+18-May-2021 00:26:38.593 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+18-May-2021 00:26:38.593 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+18-May-2021 00:26:38.595 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4b20ca2b')
+18-May-2021 00:27:05.202 GRAVE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() para servlet [controllers.profile] lanzó excepción
+	java.lang.IllegalStateException: No puedo reenviar después de que la respuesta se haya llevado a cabo.
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:323)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.profile.doGet(profile.java:46)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+18-May-2021 00:51:46.198 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+18-May-2021 00:51:46.198 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+18-May-2021 00:51:46.200 INFORMACIÓN [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@4b20ca2b')
+18-May-2021 01:22:04.170 GRAVE [http-nio-8080-exec-9] org.apache.catalina.core.ApplicationDispatcher.invoke El Servlet.service() para servlet [jsp] lanzó una excepción
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [94] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+91: 		        <input type="submit" value="Publicar tu respuesta">
+92: 		    </form>
+93: 		</div>
+94:  <% } %>
+95: 
+96: </div>
+97: <div class="big">
+
+
+Ha tenido lugar un error en la línea: [116] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+usuario cannot be resolved to a variable
+113: 				</th><th class="columna3"><label> <%= tweets.get(i).datetime() %></label></th>
+114: 			</tr>
+115: 			<tr class="fila"><th class="columna1">
+116: 				<% if(usuario != null ) { 	%>
+117:                 	<form action="retransmision" method="post">
+118: 							<input type="hidden" name="idMensaje" value="<%= tweets.get(i).getId() %>">
+119: 				    	<input type="submit" value="RTx" class="RT">
+
+
+Ha tenido lugar un error en la línea: [329] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [334] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+response cannot be resolved
+
+Ha tenido lugar un error en la línea: [335] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [337] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved
+
+Ha tenido lugar un error en la línea: [343] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "finally", { expected
+
+Ha tenido lugar un error en la línea: [344] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.conversacion.doGet(conversacion.java:60)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+18-May-2021 01:22:04.170 GRAVE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke El Servlet.service() para el servlet [controllers.conversacion] en el contexto con ruta [/proyecto] lanzó la excepción [No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [94] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+91: 		        <input type="submit" value="Publicar tu respuesta">
+92: 		    </form>
+93: 		</div>
+94:  <% } %>
+95: 
+96: </div>
+97: <div class="big">
+
+
+Ha tenido lugar un error en la línea: [116] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+usuario cannot be resolved to a variable
+113: 				</th><th class="columna3"><label> <%= tweets.get(i).datetime() %></label></th>
+114: 			</tr>
+115: 			<tr class="fila"><th class="columna1">
+116: 				<% if(usuario != null ) { 	%>
+117:                 	<form action="retransmision" method="post">
+118: 							<input type="hidden" name="idMensaje" value="<%= tweets.get(i).getId() %>">
+119: 				    	<input type="submit" value="RTx" class="RT">
+
+
+Ha tenido lugar un error en la línea: [329] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [334] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+response cannot be resolved
+
+Ha tenido lugar un error en la línea: [335] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [337] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved
+
+Ha tenido lugar un error en la línea: [343] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "finally", { expected
+
+Ha tenido lugar un error en la línea: [344] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] con causa raíz
+	org.apache.jasper.JasperException: No se puede compilar la clase para JSP: 
+
+Ha tenido lugar un error en la línea: [94] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+91: 		        <input type="submit" value="Publicar tu respuesta">
+92: 		    </form>
+93: 		</div>
+94:  <% } %>
+95: 
+96: </div>
+97: <div class="big">
+
+
+Ha tenido lugar un error en la línea: [116] en el archivo jsp: [/WEB-INF/jsp/conversacion.jsp]
+usuario cannot be resolved to a variable
+113: 				</th><th class="columna3"><label> <%= tweets.get(i).datetime() %></label></th>
+114: 			</tr>
+115: 			<tr class="fila"><th class="columna1">
+116: 				<% if(usuario != null ) { 	%>
+117:                 	<form action="retransmision" method="post">
+118: 							<input type="hidden" name="idMensaje" value="<%= tweets.get(i).getId() %>">
+119: 				    	<input type="submit" value="RTx" class="RT">
+
+
+Ha tenido lugar un error en la línea: [329] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [331] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [332] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [334] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+response cannot be resolved
+
+Ha tenido lugar un error en la línea: [335] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [337] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+out cannot be resolved
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Ha tenido lugar un error en la línea: [340] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved
+
+Ha tenido lugar un error en la línea: [343] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+Syntax error on token "finally", { expected
+
+Ha tenido lugar un error en la línea: [344] en el fichero java generado: [/var/home/lab/alum0/03/84/036/WebCom/PROYECTO/apache-tomcat-9.0.44/work/Catalina/localhost/proyecto/org/apache/jsp/WEB_002dINF/jsp/conversacion_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:482)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:378)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:326)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:710)
+		at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:457)
+		at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+		at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+		at controllers.conversacion.doGet(conversacion.java:60)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
